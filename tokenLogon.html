@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head><title>Entrar</title>
+
+<style>
+    body{
+        background-color: aliceblue;
+    }
+    #logon{
+        background-color: white;
+        width: 600px;
+        /*height: 60px;*/
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+    }
+    #txtToken{
+        width:80%;
+        font-size: larger;
+    }
+    #btnEntrar{
+        font-size: larger;
+        margin-left: 20px;
+    }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+function logon(){
+    $txt = $(txtToken).val();
+    if($txt.length != 40){
+        alert("Token não é válido");
+    }
+    else{
+        localStorage.setItem("data_token",$txt);
+        window.location.href = "moneylog.html";
+    }
+}
+</script>
+
+</head>
+<body>
+<div id='logon'>
+    <h3 style='margin: 0;'>Insira o Token de acesso:</h3><br>
+    <input id='txtToken'  type=text  placeholder="Token"> 
+    <input id='btnEntrar' type="button" value="Entrar" onclick="logon();">
+</div>
+</body>
+</html>
