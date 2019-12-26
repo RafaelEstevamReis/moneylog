@@ -24,11 +24,11 @@ ml.storage = {
 	// drivers
 	availableDrivers: [
 		'html',
-		'browser',
-		'filesystem',
-		'googledrive'
+		//'browser',
+		//'filesystem',
+		//'googledrive'
 	],
-	defaultDriver: 'filesystem',  // default driver at app init
+	defaultDriver: 'html',  // default driver at app init
 	driver: {},                   // the currently loaded driver
 	drivers: {},                  // all driver's implementations
 

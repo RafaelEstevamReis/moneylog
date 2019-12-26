@@ -52,7 +52,7 @@ var initMonthOffsetUntil = 0;     // To:   month will be N months from now
 var initStorageWidgetOpen = true; // Start app with the Storage widget opened?
 var initViewWidgetOpen = true;    // Start app with the View widget opened?
 var initTagCloudOpen = true;      // Start app with the Tag Cloud widget opened?
-var showStorageWidget = true;     // Show Storage widget in the sidebar?
+var showStorageWidget = false;     // Show Storage widget in the sidebar?
 var showViewWidget = true;        // Show View widget in the sidebar?
 var showTagCloud = true;          // Show Tag Cloud widget in the sidebar?
 
