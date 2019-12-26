@@ -1,3 +1,14 @@
+// -------------------------------------------------------------------
+// This file extends some functions of MoneyLog
+//
+// It has the same licence as the rest of the MoneyLog
+//  and it's source is available at:
+//  SourceCode - https://github.com/RafaelEstevamReis/moneylog
+// 
+// License/Licença:
+// 	MIT - http://en.wikipedia.org/wiki/MIT_license
+//  -------------------------------------------------------------------
+
 $tk = localStorage.getItem("data_token");
 if($tk == null){
     window.location.href = "tokenLogon.html";
@@ -7,7 +18,7 @@ else{
 }
 
 function doFetch($token){
-    $baseUrl = "URL HERE";
+    $baseUrl = "https://DOMAIN_HERE/mlGet.php?acesso=[TK]";
     $url = $baseUrl.replace("[TK]", $token);
 
     $.ajax({
